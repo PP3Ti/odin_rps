@@ -25,21 +25,50 @@ function getPlayerChoice() {
     }
 }
 
-function playRound(playerSelection, computerSelection) {
-    playerSelection = getPlayerChoice();        // get input from both parties
-    computerSelection = getComputerChoice(); 
+function playRound() {
 
-    if(playerSelection == computerSelection){       // create logic
-        return "Draw!"
+    let playerSelection = getPlayerChoice();        // get input from both parties
+    let computerSelection = getComputerChoice(); 
+    console.log("player: "+ playerSelection + " computer: "+ computerSelection)
+
+    if(playerSelection == computerSelection){       // create logic, 0 == draw, 1 == computer win, 2  == player win
+        return 0
     } else if ((computerSelection == "rock") && (playerSelection == "scissors")) {
-        return "The computer won!"
+        return 1
     } else if ((computerSelection == "paper") && (playerSelection == "rock")) {
-        return "The computer won!"
+        return 1
     } else if ((computerSelection == "scissors") && (playerSelection == "paper")) {
-        return "The computer won!"
+        return 1
     } else {
-        return "The player won"
+        return 2
     }
 }
 
-console.log(playRound());
+function game(gameLength) {           // play a game of as many rounds as you want
+
+    let playerScore = 0;        // create variables for the score
+    let computerScore = 0;
+    let drawScore = 0;          //create draw counter for debugging
+    let result = 0;
+
+    for (i = 0; i < gameLength; i++) {
+        result = playRound();
+        switch (result) {
+            case 1 : computerScore++; break;
+            case 2 : playerScore++; break;
+            default : drawScore++; break;
+        }
+    }
+
+    console.log(playerScore, computerScore, drawScore) // check score for debuging
+    
+    if (playerScore > computerScore) {
+        return "The player won!"
+    } else if (computerScore > playerScore) {
+        return "The computer won!"
+    } else {
+        return "Draw!"
+    }
+}
+
+console.log(game(5));
