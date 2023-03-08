@@ -44,7 +44,7 @@ function playRound() {
     }
 }
 
-function game(gameLength) {           // play a game of as many rounds as you want
+function playGame(gameLength) {           // play a game of as many rounds as you want
 
     let playerScore = 0;        // create variables for the score
     let computerScore = 0;
@@ -71,4 +71,4 @@ function game(gameLength) {           // play a game of as many rounds as you wa
     }
 }
 
-console.log(game(5));
+console.log(playGame(5));
