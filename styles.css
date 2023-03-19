@@ -1,0 +1,62 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Roboto, sans-serif;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.scores{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+.score{
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    font-weight: 900;
+}
+.choices{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: x-large;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-bottom: 4rem;
+}
+
+.button{
+    border: none;
+    border-radius: 8px;
+    padding: 8px 32px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+p{
+    text-align: center;
+    gap: 0;
+    margin: 0;
+    padding: 1rem;
+}
+#back{
+    border: none;
+    border-radius: 8px;
+    padding: 4px 16px;
+}
+#winner{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.blockClicks{
+    pointer-events: none; 
+}  
+.footer{
+    margin-bottom: 1rem;
+}

@@ -5,13 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, paper, scissors</title>
-    <script src="rockpaper.js" defer></script>
+    <script src="rockpaper.js" type="text/javascript" defer></script>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Roboto, sans-serif;
+        }
+        h1{
+            font-size: 5rem;
+        }
+        h3{
+            font-size: 2rem;
+        }
+        .rounds{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+        }
+        form{
+            align-self: center;
+            margin: 2rem;
+        }
+        #turns{
+            border: none;
+            border-radius: 8px;
+            padding: 8px 32px;
+            font-size: 3rem;
+        }
+        button{
+            border: none;
+            border-radius: 8px;
+            padding: 8px 32px;
+            font-size: 3rem;
+        }
+    </style>
 </head>
-<body> 
-    <div id="buttons">
-        <button class="button" id="rock">Rock</button>
-        <button class="button" id="paper">Paper</button>
-        <button class="button" id="scissors">Scissors</button>
+<body class="start"> 
+    <div class="greet">
+        <h1 >Play rock, paper, scissors!</h1>
+    </div>
+    <div class="rounds">
+        <h3>How many rounds would you like to play?</h2>
+            <select id="turns" name="turns">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+            </select>
+        <button id="play">Play!</button>
     </div>
 </body>
 </html>
